@@ -1,0 +1,43 @@
+<templateSet group="libgdx">
+  <template name="gdxitar" value="for(int $INDEX$ = 0; $INDEX$ &lt; $ARRAY$.size; $INDEX$++) {&#10;  $ELEMENT_TYPE$ $ELEMENT_VAR$ = $CAST$ $ARRAY$.get($INDEX$);&#10;  $END$&#10;}" description="Iterate elements com.badlogic.gdx.utils.Array" toReformat="true" toShortenFQNames="true">
+    <variable name="ARRAY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="INDEX" expression="suggestIndexName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ELEMENT_TYPE" expression="guessElementType(ARRAY)" defaultValue="&quot;Object&quot;" alwaysStopAt="true" />
+    <variable name="ELEMENT_VAR" expression="suggestVariableName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="CAST" expression="castToLeftSideType()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="gdxp" value="$ELEMENT_TYPE$ $ELEMENT_VAR$ = Pools.$POOL_TYPE$.grabNew();&#10;$ELEMENT_VAR$$END$&#10;Pools.$POOL_TYPE$.freeCount(1);" description="Allocate from a pool" toReformat="false" toShortenFQNames="true">
+    <variable name="POOL_TYPE" expression="" defaultValue="&quot;pool&quot;" alwaysStopAt="true" />
+    <variable name="ELEMENT_TYPE" expression="rightSideType()" defaultValue="&quot;Type&quot;" alwaysStopAt="true" />
+    <variable name="ELEMENT_VAR" expression="suggestVariableName()" defaultValue="&quot;instance&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+    </context>
+  </template>
+  <template name="gdxpm" value="final int mark = Pools.$POOL_TYPE$.mark();&#10;$ELEMENT_TYPE$ $ELEMENT_VAR$ = Pools.$POOL_TYPE$.grabNew();&#10;$ELEMENT_VAR$$END$&#10;Pools.$POOL_TYPE$.freeToMark(mark);" description="Mark and allocate from a pool" toReformat="false" toShortenFQNames="true">
+    <variable name="POOL_TYPE" expression="" defaultValue="&quot;pool&quot;" alwaysStopAt="true" />
+    <variable name="ELEMENT_TYPE" expression="rightSideType()" defaultValue="&quot;Type&quot;" alwaysStopAt="true" />
+    <variable name="ELEMENT_VAR" expression="suggestVariableName()" defaultValue="&quot;instance&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+    </context>
+  </template>
+</templateSet>

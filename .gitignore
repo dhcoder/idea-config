@@ -1,0 +1,10 @@
+componentVersions/
+colors/
+migration/
+options/
+plugins/
+tasks/
+disabled_plugins.txt
+disabled_update.txt
+port
+
