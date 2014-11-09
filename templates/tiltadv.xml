@@ -1,0 +1,18 @@
+<templateSet group="tiltadv">
+  <template name="tltserv" value="$TYPE$ $VAR$ = Services.get($CLASS$.class)$END$;" description="var = Services.get(...)" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASS" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
+    <variable name="TYPE" expression="rightSideType()" defaultValue="&quot;Object&quot;" alwaysStopAt="true" />
+    <variable name="VAR" expression="suggestVariableName()" defaultValue="&quot;service&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="tltserm" value="Services.get($CLASS$.class)$END$;" description="Services.get(...)" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASS" expression="classNameComplete()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+</templateSet>
