@@ -1,0 +1,26 @@
+<templateSet group="javafx">
+  <template name="fxpropi" value="private SimpleIntegerProperty $PROPERTY$ = new SimpleIntegerProperty($VALUE$) {&#10;    @Override protected void invalidated() {&#10;        $END$&#10;    }&#10;};&#10;public int get$PROPERTYCAMEL$() { return $PROPERTY$.getValue(); }&#10;public void set$PROPERTYCAMEL$(final int value) { $PROPERTY$.set(value);}&#10;public SimpleIntegerProperty $PROPERTY$Property() { return $PROPERTY$; }&#10;" description="JavaFX integer property" toReformat="true" toShortenFQNames="true">
+    <variable name="PROPERTY" expression="" defaultValue="&quot;property&quot;" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="PROPERTYCAMEL" expression="capitalize(PROPERTY)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="fxpropd" value="private SimpleDoubleProperty $PROPERTY$ = new SimpleDoubleProperty($VALUE$) {&#10;    @Override protected void invalidated() {&#10;        $END$&#10;    }&#10;};&#10;public double get$PROPERTYCAMEL$() { return $PROPERTY$.getValue(); }&#10;public void set$PROPERTYCAMEL$(final double value) { $PROPERTY$.set(value);}&#10;public SimpleDoubleProperty $PROPERTY$Property() { return $PROPERTY$; }&#10;" description="JavaFX double property" toReformat="true" toShortenFQNames="true">
+    <variable name="PROPERTY" expression="" defaultValue="&quot;property&quot;" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="PROPERTYCAMEL" expression="capitalize(PROPERTY)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="fxpropb" value="private SimpleBooleanProperty $PROPERTY$ = new SimpleBooleanProperty($VALUE$) {&#10;    @Override protected void invalidated() {&#10;        $END$&#10;    }&#10;};&#10;public boolean get$PROPERTYCAMEL$() { return $PROPERTY$.getValue(); }&#10;public void set$PROPERTYCAMEL$(final boolean value) { $PROPERTY$.set(value);}&#10;public SimpleBooleanProperty $PROPERTY$Property() { return $PROPERTY$; }&#10;" description="JavaFX boolean property" toReformat="true" toShortenFQNames="true">
+    <variable name="PROPERTY" expression="" defaultValue="&quot;property&quot;" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true" />
+    <variable name="PROPERTYCAMEL" expression="capitalize(PROPERTY)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+</templateSet>
