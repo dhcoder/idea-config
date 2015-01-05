@@ -23,4 +23,13 @@
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
+  <template name="fxpropo" value="private SimpleObjectProperty&lt;$CLASSTYPE$&gt; $PROPERTY$ = new SimpleObjectProperty&lt;&gt;($VALUE$) {&#10;    @Override protected void invalidated() {&#10;        $END$&#10;    }&#10;};&#10;public $CLASSTYPE$ get$PROPERTYCAMEL$() { return $PROPERTY$.getValue(); }&#10;public void set$PROPERTYCAMEL$(final $CLASSTYPE$ value) { $PROPERTY$.set(value);}&#10;public SimpleObjectProperty&lt;$CLASSTYPE$&gt; $PROPERTY$Property() { return $PROPERTY$; }&#10;" description="JavaFX object property" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASSTYPE" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROPERTY" expression="" defaultValue="&quot;property&quot;" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PROPERTYCAMEL" expression="capitalize(PROPERTY)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
 </templateSet>
